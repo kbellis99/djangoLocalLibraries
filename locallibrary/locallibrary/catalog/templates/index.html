@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Local Library Home</h1>
+
+<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">tutorial example</a> on the Mozilla Developer Network.</p>
+
+<div>
+{% load static %}
+<img src="{% static "images/local_library_model_uml.png" %}" alt="My image" style="width:555px;height:540px;"/>
+</div>  
+
+
+<h2>Dynamic content</h2>
+
+<p>The Library has the Following Results:</p>
+<ul>
+<li><strong>Books:</strong> {{ numBooks }}</li>
+<li><strong>Copies:</strong> {{ numInstances }}</li>
+<li><strong>Copies available:</strong> {{ numInstancesAvailable }}</li>
+<li><strong>Authors:</strong> {{ numAuthors }}</li>
+</ul>
+
+
+You have visited this page {{ numVisits }} times.
+
+{% endblock %}

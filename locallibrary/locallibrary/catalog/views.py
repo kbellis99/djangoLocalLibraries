@@ -22,7 +22,6 @@ class BookListView(generic.ListView):
     model = Book
     paginate_by = 10
     contextObjectName = 'Recommended Books'
-    queryset = Book.objects.filter(title__icontains='darkness')[:5]
 
 class BookDetailView(generic.DetailView):
     model = Book
